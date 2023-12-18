@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: black;
+  overflow: hidden;
+}
 
 @layer components {
   .sidebar-icon {
@@ -17,5 +21,27 @@
     text-white bg-gray-900 
     text-xs font-bold 
     transition-all duration-100 scale-0 origin-left;
+  }
+  
+  @keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    50% {
+      scale: 1 1.5;
+    }
+    to {
+      rotate: 360deg;
+    }
+  }
+
+  #blob {
+    @apply h-[34vmax] aspect-[1] absolute animate-[rotate_20s_infinite] rounded-[50%] 
+    left-2/4 top-2/4 z-[-2];
+    translate: -50% -50%;
+    background: linear-gradient(to right, #f54952, #422680);
+  }
+  #blur {
+    @apply h-full w-full absolute z-[-1] backdrop-blur-[200px];
   }
 }  
