@@ -1,6 +1,8 @@
 import { MdSportsRugby } from "react-icons/md"; 
 import { CiMusicNote1 } from "react-icons/ci";
 import { IoMdSchool } from "react-icons/io";
+import { IoIosCreate } from "react-icons/io";
+import { MdAccountCircle } from "react-icons/md";
 
 const SideBar = () => {
   return (
@@ -9,6 +11,8 @@ const SideBar = () => {
         <SideBarIcon icon={ <MdSportsRugby size="28" /> } text="Sports" />
         <SideBarIcon icon={ <CiMusicNote1 size="28"/> } text="Music" /> 
         <SideBarIcon icon={ <IoMdSchool size="28"/> } text="Academia" /> 
+        <SideBarIcon icon={ <IoIosCreate size="28"/> } text="Create" /> 
+        <SideBarIcon icon={ <MdAccountCircle size="28"/> } text="Account" /> 
     </div>
   )
 }
